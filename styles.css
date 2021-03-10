@@ -1,0 +1,72 @@
+:root {
+    --size          : 25rem;
+    --border-radius : 20%;
+    --size2         : calc(var(--size) / 5);
+    --size3         : calc(var(--size) / 2);
+    --size4         : calc(var(--size) / 1.25);
+}
+
+/* --- Mobile --- */
+@media screen and (max-width: 480px) {
+    :root {
+        --size      : 15rem;
+    }
+}
+
+
+*, *:before, *:after {
+    box-sizing      : border-box;
+}
+
+.logo-ig {
+    height          : var(--size);
+    width           : var(--size);
+    border-radius   : var(--border-radius);
+    margin          : 10% auto 0;
+    padding         : 0.1px;
+    
+    background-image:
+    radial-gradient(var(--size3) at 70% 25%, #FFF 5% 8%, transparent 8.5%),
+    radial-gradient(transparent 15% 25%, #FFF 25.5% 31%, transparent 31.5%),
+    radial-gradient(var(--size) at 30% 100%, #fdde83 20%, #fa782c 40%, #df3566 60%, transparent 100%),
+    linear-gradient(140deg, #4866d6 0% 20%, #7639ae, #9d36bb, #ce2f93, #db2c79);
+}
+
+.inner-circle {
+    height          : var(--size4);
+    width           : var(--size4);
+    border          : 1em solid #FFF;
+    border-radius   : var(--border-radius);
+    margin          : 10%;
+}
+
+@media screen and (max-width: 480px) {
+    .inner-circle {
+        border      : 0.7em solid #FFF;
+    }
+}
+
+
+img {
+    display         : inline-flex;
+    margin          : 1em;
+    font-size       : 2em;
+    height          : 1em;
+}
+
+@media screen and (max-width: 480px) {
+    img {
+        height      : 0.75em;
+        margin      : 0.5em;
+    }
+}
+
+
+img:active
+
+
+p {
+    text-align      : center;
+    margin-left     : 1em;
+}
+
