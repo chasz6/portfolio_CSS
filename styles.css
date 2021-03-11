@@ -18,6 +18,7 @@
 
 body {
     font-family     : 'Baloo Tamma 2', cursive;
+    margin-top : -5em;
 }
 
 
@@ -49,6 +50,10 @@ body {
 
 /* --- Mobile --- */
 @media screen and (max-width: 480px) {
+    body {
+        margin-top: 0;
+    }
+
     .inner-circle {
         border      : 0.7em solid #FFF;
     }
@@ -89,16 +94,47 @@ body {
 
 /* --- Me gusta --- */
 .counter {
-    margin-top: 1em;
+    margin-top : 1em;
 }
 
 
 
 /* --- Comentarios --- */
 .comments {
+    border-top      : 1px solid rgb(195, 195, 195);
+    margin-bottom: 2em;
+}
+
+form {
     display         : flex;
     width           : 100%;
-    border-top      : 1px solid rgb(195, 195, 195);
+}
+
+.comment-section {
+    height          : 300px;
+    overflow-y      : scroll;
+    scroll-behavior : smooth;
+}
+
+@media screen and (max-width: 480px) {
+    .comment-section {
+        height          : 200px;
+        overflow-y      : scroll;
+        scroll-behavior : smooth;
+    }
+
+    .comments {
+        margin-bottom   : 0;
+    }
+
+    .comment-section p {
+        font-size       : 0.9em;
+    }
+}
+
+
+.comment-section::-webkit-scrollbar {
+    display         : none;
 }
 
 .div-comment {
@@ -119,13 +155,23 @@ input {
     height          : 1.75rem;
 }
 
-.enviar p {
-    padding-top     : 0.5em;
-    color           : rgb(80, 133, 218);
+.enviar button {
+    margin-top      : 2em;
+    color           : rgb(195, 195, 195);
+}
+
+button {
+    background-color: transparent;
+    border          : none;
 }
 
 .counter p {
     font-size       : 1em;
+}
+
+input:focus, 
+button:focus {
+    border: none;
 }
 
 
@@ -141,17 +187,59 @@ input {
         padding     : 0.55em 0.5em;
     }
 
-    .enviar p {
-        padding-top : 0.1em;
+    .enviar button {
+        margin-top  : 0;
+        padding-top : 0.55em;
         font-size   : 0.8em;
+    }
+
+    .enviar {
+        padding-top: 0.65em;
     }
 
     .counter p {
         font-size   : 0.85em;
     }
-}
 
+    input::placeholder {
+        font-size: 0.84em;
+    }
+}
 
 .comments {
     display: none;
+    position: fixed;
+    bottom: 0;
+    width: 399.83px
+}
+
+@media screen and (max-width: 480px) {
+    .comments {
+        width: 239.81px;
+    }
+}
+
+
+/* --- Tablet --- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .comment-section {
+        height      : 375px;
+    }
+
+    body {
+        margin-top  : -3em;
+    }
+
+    input::placeholder {
+        font-size   : 1.5em;
+    }
+
+    .enviar button {
+        font-size   : 1.2em;
+        margin-top  : 1.2em;
+    }
+
+    .counter p {
+        font-size: 1.2em;
+    }
 }

@@ -11,7 +11,7 @@
     <section class="logo-ig">
         <div class="inner-circle">
         </div>
-        <section >
+        <section>
             <article class="interacciones" id="interactions">
                 <div class="img"><img src="/imgs/heart.png" alt="like" id="like"></div>
                 <div class="img"><img src="/imgs/comment.png" alt="comment" id="comentar"></div>
@@ -21,13 +21,21 @@
             <article class="counter">
                 <p id="conteo"></p>
             </article>
-            <article class="comments" id="comment-section">
-                    <div class="avatar"><img src="./imgs/avatar.png"></div>
-                    <div class="div-comment">
-                        <input type="text" placeholder="Dejá aquí tu comentario..." id="text-comment">
-                        <!-- <div class="msg"></div> -->
+
+            <article class="comment-section" id="comment-section"></article>
+
+            <article class="comments" id="comment-writing">
+                <form id="formulario">
+                    <div class="avatar">
+                        <img src="./imgs/avatar.png">
                     </div>
-                    <div class="enviar"><p id="publicar">Publicar</p></div>
+                        <div class="div-comment">
+                            <input type="text" placeholder="Dejá aquí tu comentario..." id="text-comment">
+                        </div>
+                    <div class="enviar">
+                        <button type="reset" id="publicar" name="btnpublicar">Publicar</button>
+                    </div>
+                </form>
             </article>
         </section>
     </section>
